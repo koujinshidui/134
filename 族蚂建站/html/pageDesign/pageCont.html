@@ -1,0 +1,38 @@
+<div class="zm-edit-pageCont">
+    <div class="zm-edit-pageCont-bcWrap"></div>
+    <div class="zm-edit-pageCont-quickSelect">
+        <div class="zm-edit-text-title">快速选择</div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<script>
+    setTimeout(function(){$(".zm-edit-pageCont").closest(".zm-dialog-box").children(".zm-dialog-bg").remove()},200);
+    $(".zm-edit-pageCont").closest(".zm-dialog").find(".zm-dialog-header").find(".zm-dialog-title").text("内容区背景");
+    $(".zm-edit-pageCont-bcWrap").append(zmEditor.component.setItems.slider($(".zm-bg-cont"),{title: "内容区背景",style: "noTab_color",isColor: true,param: "backgroundColor"}));
+    $(".zm-edit-pageCont-quickSelect li").on("click",function(){
+        var _this = $(this);
+        $(".zm-bg-cont").css("backgroundColor",_this.css("backgroundColor"));
+    })
+</script>

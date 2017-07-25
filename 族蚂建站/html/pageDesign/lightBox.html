@@ -1,0 +1,19 @@
+<div class="zm-edit-component-lightBox">
+    <div class="zm-edit-component-preview-wrap"></div>
+    <div class="zm-edit-component-tab">
+        <div class="zm-edit-component-tab-resource-wrap"></div>
+        <div class="zm-edit-component-tab-setting-wrap"></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+    	var lb_pop = $('.zm-edit-component-lightBox');
+    	var lb = $(".zm-component-lightBox").closest(".zm-component-box2").find(".zm-component-lightBox-wrap");
+    	setTimeout(function(){
+		    lb_pop.closest(".zm-dialog-box").children(".zm-dialog-bg").remove();
+		    lb_pop.closest(".zm-dialog").find(".zm-dialog-title").text("灯箱设置");
+        },100);
+	    zmEditor.component.lightBox(lb_pop,lb);
+    });
+</script>

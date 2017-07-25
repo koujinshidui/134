@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预览网站</title>
+    <link rel="icon" href="imgs/index/title.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css" id="wo">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link href="js/farbtastic/farbtastic.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/zmDialog.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/settingsPanel.css">
+    <link rel="stylesheet" href="css/zmAnimate.css">
+    <link rel="stylesheet"  href="css/nav.css" class="navStyleMax">
+    <link rel="stylesheet" href="css/tab.css"><!-- liu -->
+    <link rel="stylesheet" href="css/product.css"><!-- liu -->
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/colpick.css"/>
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/img.css">
+    <link rel="stylesheet" href="css/shape.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/function.css">
+    <link rel="stylesheet" href="css/radio.css">
+    <link rel="stylesheet" href="css/newsBlogger.css">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="css/choiceFile.css">
+    <link rel="stylesheet" href="css/audio.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/public.css">
+    <style>
+        body{height:100%;overflow: hidden}
+    </style>
+</head>
+<body>
+<div id="zm-website"></div>
+<script src="js/plugins/jquery-1.11.3.min.js"></script>
+<div id="zmPreviewScript">
+    <script src="js/plugins/jquery-1.11.3.min.js"></script>
+    <script src="js/zmEditor.js"></script>
+    <script src="js/plugins-zm/zmDialog.js"></script>
+    <script src="js/plugins-zm/zmJqExtend.js"></script>
+    <script src="js/plugins-zm/zmRightClick.js"></script>
+    <script src="js/plugins-zm/zmKeyDown.js"></script>
+    <script src="js/plugins-zm/zmAction.js"></script>
+    <script src="js/component/dialogBtnInfo.js"></script>
+    <script src="js/router/router.js"></script>
+    <script src="js/pageManage.js"></script>
+    <script src="js/zmGlobal.js"></script>
+    <script src="manage/js/zmManage.js"></script>
+
+    <script src="js/component/setItems.js"></script>
+    <script src="js/component/zmSlider.js"></script>
+    <script src="js/component/public.js"></script>
+    <script src="js/component/text.js"></script>
+    <script src="js/component/shape.js"></script>
+    <script src="js/component/carousel.js"></script>
+    <script src="js/component/img.js"></script>
+    <script src="js/component/map.js"></script>
+    <script src="js/component/news.js"></script>
+    <script src="js/component/blog.js"></script>
+    <script src="js/component/function.js"></script>
+    <script src="js/component/btn.js"></script>
+    <script src="js/component/container.js"></script>
+    <script src="js/component/tab.js"></script><!--liu-->
+    <script src="js/component/product.js"></script><!--liu-->
+    <script src="js/component/nav.js"></script>
+    <script src="js/component/jquery_color.js"></script>
+    <script src="js/component/banner.js"></script>
+    <script src="js/component/video.js" ></script>
+    <script src="js/index.js"></script>
+    <script src="js/plugins-zm/zmDragSort.js"></script>
+    <script src="js/farbtastic/farbtastic.js"></script>
+    <script src="js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--carousel test start-->
+    <script src="js/plugins/box-slider.jquery.js"></script>
+    <script src="js/plugins/box-slider-style.js"></script>
+    <!--carousel test end-->
+    <script src="js/plugins/colpick.js" ></script>
+    <!--<script src="js/component/radio.js" ></script>-->
+    <script src="js/choiceFile/choiceFile.js" ></script>
+    <script src="js/choiceFile/choiceRadio.js" ></script>
+    <script src="js/zm-select.js" ></script>
+    <script src="js/component/audio.js"></script>
+    <script>
+        //进入编辑器选择类型
+        $('.zm-editor-type li').click(function(){
+            $('.zm-editor-beforeBox').remove()
+        })
+        var windowH=$(window).height();
+        $(function(){
+            $(".zm-components").find(".zm-components-ul").css({"height":windowH-200});
+            $(".zm-components").find(".zm-components-ul").mCustomScrollbar({theme:"minimal"});//滚动条
+            $(".zm-components").find(".zm-components-detail-term").css({"height":windowH-200});
+            var id = $.zmGetUrlParam('fId')
+            $.ajax({
+                url: zmEditor.url.getComponentById,
+                type : "post",
+                data : {"id":id},
+                success: function(e){
+                    var data = e.data;
+                    zmManage.componentEditor()
+                    zmManage.component.myList.edit(id,data.fName,data.fContext,data.fType,data.fComponentType)
+                    $('.zm-editor-beforeBox').hide();
+                },
+                error:function(){
+                    console.log("error")
+                }
+            })
+
+        })
+        $(document).on('click',".zm-components-type-switch",function(){
+            var _this = $(this);
+            if($('.zm-components-detail').data('isSort')){
+                zmManage.componentListIsSort();
+                return;
+            }
+            _this.find(".fa").toggle();
+            var componentsUl = _this.siblings('.zm-components-ulBox');
+            componentsUl.stop().slideToggle();
+            var componentsTitle = _this.find('.zm-components-type-switch-title');
+            if(componentsUl.css('display')=="none"){
+                componentsTitle.hide();
+            }
+            else{
+                componentsTitle.show();
+            }
+            $(".zm-components-detail").stop().fadeOut()
+        })
+        /*关闭详情*/
+        $(document).on("click",".zm-components-detail-close",function(){
+            if($('.zm-components-detail').data('isSort')){
+                zmManage.componentListIsSort()();
+                return;
+            }
+            $(".zm-components-detail").hide()
+        });
+        $(window).resize(function(){
+            windowH = $(window).height();
+            $(".zm-components").find(".zm-components-ul").css({"height":windowH-200});
+            $(".zm-components").find(".zm-components-detail-term").css({"height":windowH-200});
+            //$('.zm-dialog-box .zm-dialog-content').css({"height":windowH-200})
+            var w = parseInt($(".zm-editor-ruler-x-width").html());
+            zmEditor.setRuler(w)
+        })
+        //换肤
+        //        $(".zm-skin li").click(function(){
+        //            var skin = $(this).attr("class");
+        //            console.log(skin);
+        //            var iClass =skin+" zm-header-top"
+        //            $(".zm-header-top").removeAttr("class").addClass(iClass)
+        //
+        //            ///radio.js
+        //        })
+
+    </script>
+</div>
+</body>
+
+<script>
+//    if (localStorage.getItem("zmPreviewStyle") != "") {
+//        document.head.innerHTML = localStorage.getItem("zmPreviewStyle");
+////        console.log(localStorage.getItem("zmPreviewStyle"))
+//        document.title="网站预览"
+//    }
+    if (localStorage.getItem("zmPreviewHtml") != "") {
+        document.getElementById('zm-website').innerHTML = localStorage.getItem("zmPreviewHtml")
+    }
+//    if (localStorage.getItem("zmPreviewScript") != "") {
+//        document.getElementById('zmPreviewScript').innerHTML = localStorage.getItem("zmPreviewScript");
+//        console.log(localStorage.getItem("zmPreviewScript"))
+//    }
+
+    $(function(){
+        $(".zm-all").css("height",$(window).height());
+        $(".zm-row").css({"border-color":"transparent"});
+        $(".zm-row-resize,.zm-row-line").remove();
+        $(".zm-row-type").remove();
+        //移除box1中编辑类
+        $(".zm-component-box1").removeClass("zm-component-editor zm-component-movable zm-component-nowEdit");
+        //移除组件操作以及编辑元素
+        $('.zm-component-main-temp').remove();
+        $('.zm-component-edit').remove();
+        $('.zm-row-edit').remove();
+        $('.zm-component-carousel-picTip').hide();//移除轮播页码元素
+        //移除可编辑组件的对应属性
+        $(".zm-component-main").attr("contenteditable",false);
+        $('.zm-dialog-box').remove();
+        $('.zm-component-box1').each(function(){
+            var _this = $(this);
+            var type = _this.attr('data-zm-component-type');
+            if(zmEditor.component[type].render){
+                zmEditor.component[type].render(_this);
+            }
+
+        })
+//        $(".zm-component-box1").each(function(){
+//            var _this = $(this);
+//            var main = _this.find(".zm-component-main");
+//            main.attr("contenteditable",false)
+//            _this.removeClass("zm-component-editor zm-component-movable");
+//            _this.find(zmEditor.component.str.optionArea).remove();
+//        })
+    })
+</script>
+</html>

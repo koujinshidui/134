@@ -1,0 +1,418 @@
+@import "base";
+/*   选项卡基础样式   */
+.zm-edit-components-tabs{
+  width: 300px;
+  height: 200px;
+  font-size: 12px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  .zm-edit-components-tabs-tit{
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+    display: flex;
+    .zm-edit-components-tabs-tit-channel{
+      height: 100%;
+      width: 20%;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-size: 18px;
+      display: flex;
+    }
+    .zm-edit-components-tabs-tit-lab{
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      display: flex;
+      li{
+        height: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        border-style: solid;
+      }
+    }
+  }
+  .zm-edit-components-tabs-cont{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex: 1;
+    background-color: rgba(255,255,255,1);
+    &>div{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      border: 0;
+    }
+    &>div:first-child{
+      display: block;
+    }
+  }
+}
+/* 选项卡样式 01 */
+.tab_style_01{
+  border: 1px solid #eee;
+  box-shadow: 0 0 5px #eee;
+  .zm-edit-components-tabs-tit{
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+    .zm-edit-components-tabs-tit-channel{
+      display: none;
+    }
+  }
+}
+/* 选项卡样式 02 */
+.tab_style_02{
+  border: 0px solid #eee;
+  box-shadow: 0 0 0 #eee;
+  .zm-edit-components-tabs-tit{
+    border: 0px solid transparent;
+    border-top: 3px solid rgb(74,177,167);
+    background-color: #f7f7f7;
+    .zm-edit-components-tabs-tit-channel{
+      display: none;
+    }
+  }
+  .zm-edit-components-tabs-cont{
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px #eee;
+  }
+}
+/* 选项卡样式 03 */
+.tab_style_03{
+  border: 0 solid #eee;
+  box-shadow: 0 0 0 #eee;
+  .zm-edit-components-tabs-cont{
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px #eee;
+  }
+}
+
+/*   频道开关   */
+.zm-edit-components-tabs-channel{
+  height: 61px;
+  position: relative;
+  .zm-edit-text-title{
+    height: 61px;
+    float: left;
+    line-height: 61px;
+  }
+  .zm-switch-box{
+    float: left;
+    margin-top: 20px;
+  }
+  .zm-edit-components-tabs-channel-shadow{
+    width: 265px;
+    height: 435px;
+    position: absolute;
+    bottom: -436px;
+    left: 0;
+    z-index: @shadowIndex;
+    background-color: #fff;
+  }
+}
+/*   频道链接   */
+.zm-edit-components-tabs-channel-link{
+  height: 126px;
+  .zm-edit-components-tabs-channel-link-name{
+    height: 60px;
+    .zm-edit-text-title{
+      height: 60px;
+      line-height: 60px;
+      float: left;
+    }
+    input{
+      width: 180px;
+      margin-top: 15px;
+      float: left;
+    }
+  }
+  .zm-edit-components-tabs-channel-link-link{
+    height: 30px;
+    .zm-edit-text-title{
+      height: 30px;
+      line-height: 30px;
+      float: left;
+    }
+    .zm-switch-box{
+      float: left;
+      margin-top: 5px;
+    }
+    .zm-set-link{
+      display: inline-block;
+      width: 60px;
+      height: 20px;
+      border-radius: 10px;
+      line-height: 20px;
+      text-align: center;
+      background-color: @baseColorGray3;
+      margin-top: 5px;
+      float: right;
+    }
+    .choiceColor {
+      color: @baseColorWhite !important;
+      background-color: @baseColor !important;
+    }
+    .choiceColor:hover {
+      background-color: @baseColorLight0 !important;
+    }
+  }
+  .zm-edit-components-tabs-channel-link-text{
+    height: 35px;
+    .zm-edit-text-title{
+      height: 35px;
+      line-height: 30px;
+      float: left;
+    }
+    .zm-edit-components-tabs-channel-link-text-name{
+      display: inline-block;
+      width: 180px;
+      height: 30px;
+      float: left;
+      color: @baseColor;
+      overflow: hidden;
+    }
+  }
+}
+/*  上门楣  */
+.zm-edit-components-tabs-top-border{
+  height: auto;
+  position: relative;
+  .zm-edit-components-tabs-top-border-onOff{
+    width: 100%;
+    height: 60px;
+    .zm-edit-text-title{
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  .zm-edit-components-tabs-top-border-wrap{
+    width: 100%;
+    height: 120px;
+    display: none;
+    .zm-edit-components-tabs-top-border-col{
+      height: 60px;
+    }
+    .zm-edit-components-tabs-top-border-hei{
+      height: 60px;
+    }
+  }
+  .zm-edit-components-tabs-temporary{
+    display: none;
+    width: 265px;
+    height: 121px;
+    position: absolute;
+    top: -122px;
+    left: 0;
+    z-index: @shadowIndex;
+    background-color: rgba(255,255,255,.8);
+  }
+}
+/*  下门楣  */
+.zm-edit-components-tabs-bottom-border{
+  height: auto;
+  .zm-edit-components-tabs-bottom-border-onOff{
+    width: 100%;
+    height: 60px;
+    .zm-edit-text-title{
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  .zm-edit-components-tabs-bottom-border-wrap{
+    width: 100%;
+    height: 120px;
+    display: none;
+    .zm-edit-components-tabs-bottom-border-col{
+      height: 60px;
+    }
+    .zm-edit-components-tabs-bottom-border-hei{
+      height: 60px;
+    }
+  }
+}
+/* link 样式 */
+.zm-edit-components-tabs-link{
+  height: auto;
+  border-bottom: none;
+  .zm-edit-components-tabs-lab{
+    width: 100%;
+    height: 61px;
+    border-bottom: 1px dashed @baseColorGray4;
+    &>span:nth-child(1){
+      display: inline-block;
+      float: left;
+      width: 125px;
+      height: 30px;
+      border-right: 1px solid @baseColorGray3;
+      line-height: 30px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    &>span:nth-child(2){
+      display: inline-block;
+      float: left;
+      width: 70px;
+      height: 30px;
+      border-right: 1px solid @baseColorGray3;
+      line-height: 30px;
+      text-align: center;
+      margin-top: 15px;
+    }
+    &>span:nth-child(3){
+      display: inline-block;
+      float: left;
+      width: 70px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+  .zm-edit-components-tabs-cont{
+    width: 100%;
+    height: auto;
+    .zm-edit-components-tabs-titleLink{
+      width: 100%;
+      height: 61px;
+      border-bottom: 1px solid @baseColorGray3;
+      .zm-edit-components-tabs-link-close{
+        display: inline-block;
+        float: left;
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: @baseColor;
+        color: @baseColorWhite;
+        cursor: pointer;
+        margin: 20px 5px 0 0;
+      }
+      .zm-edit-components-tabs-link-close:hover{
+        background-color: @baseColorLight0;
+      }
+      .zm-edit-components-tabs-text{
+        width: 100px;
+        height: 30px;
+        margin-top: 15px;
+        float: left;
+      }
+      .zm-switch-box{
+        float: left;
+        width: 50px;
+        height: 20px;
+        border-radius: 10px;
+        margin: 20px 15px;
+      }
+      .zm-edit-components-tabs-popup{
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        border-radius: 10px;
+        line-height: 20px;
+        text-align: center;
+        margin: 20px 0 0 10px;
+        background-color: @baseColorGray3;
+        color: @baseColorBlack;
+      }
+    }
+    .zm-edit-components-tabs-titleLink:hover{
+      background-color: @baseColorLight2;
+    }
+  }
+  .zm-edit-components-tabs-add{
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    div{
+      width: 60px;
+      height: 60px;
+      background-color: @baseColor;
+      color: @baseColorWhite;
+      border-radius: 50%;
+      margin: 35px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 0 10px @baseColor;
+      animation: animate007 5s ease-in-out infinite alternate;
+      i{
+        display: block;
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      span{
+        display: block;
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+  .zm-edit-components-tabs-add >div:hover{
+    background-color: @baseColorLight0;
+  }
+}
+@keyframes animate007 {
+  50%{transform: scale(0.8)}
+}
+/*  对齐方式  */
+.zm-edit-components-tabs-align{
+  height: 224px;
+  .zm-edit-components-text-title{
+    display: block;
+    width: 100%;
+    height: 41px;
+    line-height: 40px;
+    text-align: left;
+    border-bottom: 1px dashed @baseColorGray3;
+  }
+  &>div{
+    width: 100%;
+    height: 61px;
+    border-bottom: 1px dashed @baseColorGray3;
+    label{
+      .checkbox;
+      margin: 22px 20px 0 0;
+      float: left;
+    }
+    .choice:after{
+      .checkboxAfter
+    }
+    &>span{
+      display: block;
+      float: left;
+      width: 225px;
+      height: 36px;
+      background-color: @baseColor;
+      border-radius: 5px;
+      margin-top: 12px;
+      &>i{
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: @baseColorWhite;
+        font-size: 18px;
+        margin-top: 8px;
+      }
+    }
+  }
+}

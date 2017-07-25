@@ -1,0 +1,290 @@
+// banenr 横条样式
+.banner-top{
+  background-color: #bae6e2;;width: 350px;height: 170px;overflow: hidden;
+}
+.zm-component-banner-setting{
+  margin-top: 35px;margin-left: 117px;width: 105px;height: 35px;border-radius: 20px;border: 2px solid #fff;color:#fff;background-color: #b9c5c5;padding: 3px 0 0 15px;position: relative;
+  span:nth-of-type(1){ font-size: 24px; }
+  span:nth-of-type(2){ float: right;margin-right: 25px;margin-top: 3px; }
+  span:nth-of-type(3){ position: absolute;width: 35px;height: 35px;border-radius: 50%;border: 1px solid #4ab1a7;top: -2px;right: -45px;
+    i{position: absolute;top: 6px;left: 13px;    border-right: 13px solid transparent;border-top: 10px solid transparent;border-bottom: 10px solid transparent;border-left: 13px solid #4ab1a7;}
+  }
+}
+.zm-component-banner-color{
+  position:absolute;left:35px;top: 100px;border-radius: 20px;border: 2px solid #fff;width: 80px;height: 28px;color:#fff;background-color: #b9c5c5;
+  & span:nth-of-type(1){font-size: 18px;  i{width: 20px;height: 20px;float: left;margin: 3px 2px 0 10px; svg{fill: #fff;} }}
+}
+
+.zm-component-banner-img{
+  position:absolute;left:130px;top: 100px;border-radius: 20px;border: 2px solid #fff;width: 80px;height: 28px;color:#fff;background-color: #b9c5c5;
+  & span:nth-of-type(1){font-size: 18px;   i{width: 20px;height: 20px;float: left;margin: 3px 2px 0 10px; svg{fill: #fff;} }}
+}
+.zm-component-banner-video{
+  position:absolute;left:225px;top: 100px;border-radius: 20px;border: 2px solid #fff;width: 80px;height: 28px;color:#fff;background-color: #b9c5c5;
+  & span:nth-of-type(1){font-size: 18px;   i{width: 20px;height: 20px;float: left;margin: 3px 2px 0 10px; svg{fill: #fff;} }}
+}
+.zm-component-resourceLibrar{
+  height: 50px;line-height: 50px;padding-left: 10px;font-size: 16px;
+}
+
+.banner-style-father{
+  height: 170px;
+  background-color: #00AA91;
+  overflow: hidden;
+  margin: 0;
+  background-image: url("../imgs/banner/styleBG.png");
+  background-size:100% 100%;
+}
+.banner-style{
+  width: 100px;height: 36px;border: 2px solid rgba(75, 177, 166, 1) !important;border-radius: 18px;margin: auto;position:relative;margin-top: 60px;
+  &>.styles{
+    cursor: pointer;
+    width: 100%;;height: 36px;position: absolute;z-index: 2;
+    &>i{
+      width: 28px;
+      float: left;
+      margin-left: 16px;
+      margin-top: 2px;
+      &>svg{
+        fill: rgba(75, 177, 166, 1);
+      }
+    }
+    &>span{float: left;
+      margin-top: 7px;
+      margin-left: 7px;
+      color: rgba(75, 177, 166, 1);
+    }
+  }
+}
+// banenr 横条样式
+// banenr 横条内容样式
+//.zm-bg-banner-BGC,.zm-bg-banner-PIC,.zm-bg-banner-Video,.zm-bg-banner-Combination{
+//  width: 100%;
+//  height: 100%;
+//  display: none;
+//}
+//div[data-type-banner='image'] .zm-bg-banner-PIC{
+//  display: block;
+//  width: 300px;
+//  height: 100px;
+//  background-image: url("../imgs/carousel-massage01.jpg");
+//  background-repeat: no-repeat;
+//  background-size: 100% 100%;
+//};
+//div[data-type-banner='color'] .zm-bg-banner-BGC{  display: block;};
+//div[data-type-banner='video'] .zm-bg-banner-Video{  display: block;};
+//div[data-type-banner='Combination'] .zm-bg-banner-Combination{  display: block;}
+
+
+// banenr 横条内容样式
+
+
+
+//覆盖纹理样式
+.fugaiwenli{
+  margin: 0 10px;
+  padding-top: 25px;
+  padding-left: 35px;
+  position: relative;
+  width: 340px;
+  height: 250px;
+  cursor: pointer;
+}
+.fugaiwenli>div{
+  margin-right: 20px;
+  float: left;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.u375,.u377,.u361{
+  position: absolute;
+  top: 175px;
+}
+.u361{
+  top: -10px;
+  left: 30px;
+  width: 100px!important;
+}
+.u375Aandu377{
+  width: 100px!important;
+  height: 36px!important;
+  line-height: 36px;
+  font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+}
+.u375{
+  .u375Aandu377;
+  left: 75px;
+  cursor: pointer;
+  background-color: rgba(242, 242, 242, 1);
+}
+.u377{
+  .u375Aandu377;
+  color: #FFFFFF;
+  left: 175px;
+  cursor: pointer;
+  background-color: rgba(75, 177, 166, 1);
+}
+.u351{
+  border-width: 1px;
+  border:  1px solid rgba(121, 121, 121, 1);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.u351::after{
+  content: " ";
+  display: block;
+  border: 1px solid #ff461f;
+  margin-top: 25px;
+  transform: rotate(-45deg) translatex(-6px)translatey(-8px);
+  width: 67px;
+}
+.u353{background-image: url('../imgs/banner/banneru353.png');}
+.u355{background-image: url("../imgs/banner/banneru355.png");}
+.u357{background-image: url("../imgs/banner/banneru357.png");}
+.u359{background-image: url("../imgs/banner/banneru359.png");background-position-x:0;}
+.u3591{background-image: url("../imgs/banner/banneru359.png");background-position-x: 180px;}
+.u3592{background-image: url("../imgs/banner/banneru359.png");background-position-x: 355px;}
+.u3593{background-image: url("../imgs/banner/banneru359.png");background-position-x: 295px;}
+//覆盖纹理样式
+
+// 图片显示比例
+.zm-comptent-showScalHtml{
+  width: 280px;
+  height: 65px;
+  position: relative;
+}
+.zm-comptent-showScalHtml-showDialog-show,.zm-comptent-showScalHtml-showDialog>div{
+  width: 160px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  cursor:pointer;
+}
+.zm-comptent-showScalHtml-showDialog-show{
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
+  border-radius: 10px;
+  float: left;
+  margin-top: 10px;
+  cursor:auto;
+}
+
+.zm-comptent-showScalHtml-showDialog{
+  width: 160px;
+  height: 95px;
+  position: absolute;
+  left: 75px;
+  top: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
+  overflow: hidden;
+  display:none;
+}
+.zm-comptent-showScalHtml-showDialog>div:hover{
+  background-color: rgba(210, 236, 233, 1);
+}
+
+.zm-icon-sanjiaoYe::before{
+  content: '';
+  border-top: 10px solid rgba(75, 177, 166, 1);
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.zm-comptent-showScalHtml  .zm-icon-sanjiaoYe{
+  position: absolute;
+  left: 200px;
+  top: 30px;
+}
+
+.zm-comptent-showScalHtml .zm-icon-sanjiaoYe:hover{
+  cursor: pointer;
+}
+.zm-comptent-showScalHtml>P{
+  margin-right: 10px;
+  margin-top: 15px;
+  float: left;
+}
+// 图片显示比例
+
+
+//播放效果
+.zm-component-PlaybackEffect{
+  height: 360px;
+  margin:20px 0 0-7px;
+
+}
+.PlaybackEffectText{
+  height: 40px;
+  line-height: 40px;
+  width: 350px;
+  text-align: center;
+  background-color: rgba(242, 242, 242, 1);
+}
+.PlaybackEffectComponent{
+  height: 50px;
+  line-height: 50px;
+  width: 350px;
+  margin-top: 10px;
+  position: relative;
+}
+.PlaybackEffectComponent>span:nth-of-type(1){
+  padding-left: 35px;
+  line-height: 40px;
+}
+.PlaybackEffectComponent>span,.PlaybackEffectComponent>.PlaybackEffectDiv{
+  float: left;
+}
+
+.PlaybackEffectDiv{
+  width: 158px;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 20px;
+  border:1px solid rgba(242, 242, 242, 1);
+  margin-left: 10px;
+  position: relative;
+}
+.PlaybackEffectDiv>.zm-icon-sanjiaoYe{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+}
+.PlaybackEffectDivDiolag{
+  display: none;
+  width: 160px;
+  height: 180px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 108px;
+  text-align: center;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.PlaybackEffectDivDiolag>div{
+  width: 160px;
+  height: 30px;
+  line-height: 30px;
+}
+.PlaybackEffectDivDiolag>div:hover{
+  background-color:rgba(210, 236, 233, 1);
+}
+.PlaybackEffectComponentLoop{
+
+}
+.PlaybackEffectComponentLoop>span{
+  padding-left: 35px;
+  margin-right: 10px;
+
+}
+//播放效果

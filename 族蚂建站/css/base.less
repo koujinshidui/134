@@ -1,0 +1,129 @@
+/*1. 绿*/
+//@baseColorDeep2:#29877e; //组件列表大类鼠标滑过颜色
+//@baseColor:#4ab1a7;      //基础颜色
+//@baseColorLight0:#00c3b0;//以baseColor为背景色的按钮鼠标滑过背景色或者边框颜色:
+//@baseColorLight1:#dbefed;//slider横条背景颜色及其输入框鼠标划入背景色，
+//@baseColorLight2:#badedb;//滚动条背景色
+//@baseColorLight3:#f1faf9;//带背景的弹窗 背景色
+//@baseColorLight4:#f1faf9;//slider背景阴影
+//@baseColorLight5:#69ede1;//组件拖拽时遮罩层背景色
+/*2、红色*/
+//@baseColorDeep2:#b23942; //组件列表大类鼠标滑过颜色
+//@baseColor:#da434e;      //基础颜色
+//@baseColorLight0:#f63442;//以baseColor为背景色的按钮鼠标滑过背景色或者边框颜色:
+//@baseColorLight1:#fceced;//slider横条背景颜色及其输入框鼠标划入背景色，
+//@baseColorLight2:#fcb1b6;//滚动条背景色
+//@baseColorLight3:#faf2f3;//带背景的弹窗 背景色
+//@baseColorLight4:#edc8cb;//slider背景阴影
+/*3/蓝色*/
+//@baseColorDeep2:#2c79bb;//组件列表大类鼠标滑过颜色
+////@baseColor:#3694e5;//基础颜色
+////@baseColor:#3388FF;//基础颜色
+//@baseColor:#3089D5;//基础颜色
+//@baseColorLight0:#22c4f4;//浅+0  以baseColor为背景色的按钮鼠标滑过背景色或者边框颜色:
+//@baseColorLight1:#b1ddf8;//浅+1  slider横条背景颜色及其输入框鼠标划入背景色，选择文件弹窗背景色#eaf7ff
+//@baseColorLight2:#83ccf8;//浅+2   滚动条背景色
+//@baseColorLight3:#eaf7ff;//带背景的弹窗 背景色
+////@baseColorLight31:#eaf7ff;//带背景的弹窗 背景色2
+//@baseColorLight4:#b4dcfb;//slider背景阴影
+//@baseColorLight5:#b4dcfb;//slider背景阴影
+
+@baseColorDeep2:#2c79bb;//组件列表大类鼠标滑过颜色
+@baseColor:#3089D5;//基础颜色
+@baseColorLight0:#22c4f4;//浅+0  以baseColor为背景色的按钮鼠标滑过背景色或者边框颜色:
+@baseColorLight1:#b1ddf8;//slider横条背景颜色
+@baseColorLight2:#83ccf8;//浅+2   滚动条背景色
+@baseColorLight3:#eaf7ff;//带背景的弹窗 背景色
+//@baseColorLight31:#eaf7ff;//带背景的弹窗 背景色2
+@baseColorLight4:#b4dcfb;//slider背景阴影
+@baseColorLight5:#b4dcfb;//slider背景阴影
+@sliderBgColor:#97C4EA;
+@sliderInputBgColor:#97C4EA;
+@tabTitleBgColor:#6895BB;//tab标题背景颜色
+
+/*4、黄色*/
+//@baseColorDeep2:#c49a4b;//组件列表大类鼠标滑过颜色//基础颜色
+//@baseColor:#f0bc59;      //基础颜色
+//@baseColorLight0:#f8cf83;//以baseColor为背景色的按钮鼠标滑过背景色或者边框颜色:
+//@baseColorLight1:#fff2d9;//slider横条背景颜色及其输入框鼠标划入背景色，
+//@baseColorLight2:#f5d8a0;//滚动条背景色
+//@baseColorLight3:#fcf0da;//带背景的弹窗 背景色
+//@baseColorLight4:#c49a4b;//slider背景阴影
+
+
+
+
+
+
+/*3. 蓝*/
+//@baseColorDeep2:#2b81cb;//组件列表大类鼠标滑过颜色
+//@baseColor:#3899ec;     //基础颜色
+//@baseColorLight0:#00c3b0;//以baseColor为背景色的按钮鼠标滑过背景色或者边框颜色:
+//@baseColorLight1:#eaf7ff;//slider横条背景颜色及其输入框鼠标划入背景色，
+//@baseColorLight2:#d3edff;//滚动条背景色
+//@baseColorLight3:#a4d8d3;//带背景的弹窗 背景色
+//@baseColorLight4:#a4d8d3;//slider背景阴影
+
+@baseColorGray1:#aaa;
+@baseColorGray2:#bbb;
+@baseColorGray3:#ccc;
+@baseColorGray4:#ddd;
+@baseColorGray5:#eee;
+@baseColorWhite:#fff;
+@baseColorBlack:#000;
+@baseFontColor:#333;
+@baseFontColorLight1:#aaa;
+@baseFontColorLight2:#ccc;
+@baseFontColorLight3:#eee;
+@baseColorOpacity5:rgba(255,255,255,.5);
+@baseColorOpacity9:rgba(255,255,255,.9);
+@baseColorBlackOpacity5:rgba(0,0,0,.5);
+/********************************/
+@shadowColor: rgba(255,255,255,.9);
+@shadowIndex: 999;
+//选中状态颜色
+.choiceColor {
+  color: @baseColorWhite !important;
+  background-color: @baseColor !important;
+  cursor: pointer;
+}
+//划过状态颜色
+.choiceColor:hover {
+  background-color: @baseColorLight0 !important;
+}
+//多选框 圆圈
+.checkbox {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: 1px solid @baseColor;
+  position: relative;
+  cursor: pointer;
+}
+.checkboxAfter {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: @baseColor;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+//多选框 方块
+/********************************/
+
+.baseBorderRadiusMin{border-radius: 3px;};
+.baseBorderRadiusSmall{border-radius: 6px;};
+.baseBorderRadius{border-radius: 10px;};
+.baseBorderRadiusBig{border-radius: 20px;};
+.baseBorderRadiusMax{border-radius: 999px;};
+.baseBorderRadiusPer50{border-radius: 50%;};
+.baseBoxShadowMin{box-shadow: 0 0 1px #ccc;};
+.baseBoxShadow{box-shadow: 0 0 3px #ccc;};
+.baseBoxShadow2{box-shadow: 0 0 6px #ccc;};
+
+
+

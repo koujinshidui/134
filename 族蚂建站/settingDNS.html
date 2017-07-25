@@ -1,0 +1,152 @@
+
+<div id="zm-website-setDNS" class="zm-dialog-box zm-movableBox" data-animate="slide" style="width: 700px;height:350px ">
+    <input class="zm-website-setService-dataBox" type="hidden" data-serviceType="zmFree">
+    <input class="zm-website-setDNS-dataBox" type="hidden" data-DNSType="zmSecond">
+    <div class="zm-dialog zm-website-setDNS">
+        <div class="zm-dialog-header zm-movable-header">
+            <span class="zm-dialog-title">设置域名</span>
+            <span class="zm-dialog-header-btn zm-tooltip zm-dialog-close " data-zm-title="关闭">×</span>
+        </div>
+
+        <div class="zm-website-setDNS-main">
+            <div class="zm-website-setDNS-content clearFloat">
+                <div class="zm-website-setDNS-zmSecDns zm-website-setDNS-slider">
+                    <div class="zm-website-setDNS-title">
+                        <span class="fa fa-check"></span>
+                        <span>已成功保存网站信息！本站点当前的二级域名为：</span>
+                    </div>
+                    <div class="zm-website-setDNS-setBox">
+                        <div class="zm-website-setDNS-setName">族蚂二级域名：</div>
+                        <div class="zm-website-setDNS-inputBox">
+                            <div class="zm-website-setDNS-btnGroup">
+                                <span class="fa fa-arrow-left"></span>
+                                <span class="fa fa-repeat"></span>
+                            </div>
+                            <div class="zm-website-setDNS-inputDiv">
+                                <span>http://website.zuma.com/</span>
+                                <input placeholder="" class="zm-website-setDNS-zumaSecInput" value="userName" readonly>
+                            </div>
+                        </div>
+                        <div class="zm-website-setDNS-choiceBtn" onclick="zmEditor.website.slideInputBox(this,'personal')">
+                            使用自定义域名！
+                        </div>
+                    </div>
+                </div>
+                <div class="zm-website-setDNS-personalDns  zm-website-setDNS-slider">
+                    <div class="zm-website-setDNS-title">
+                        <span class="fa fa-pencil-square-o"></span>
+                        <span>请正确填写您的域名：</span>
+                    </div>
+                    <div class="zm-website-setDNS-setBox">
+                        <div class="zm-website-setDNS-setName">自定义域名：</div>
+                        <div class="zm-website-setDNS-inputBox">
+                            <div class="zm-website-setDNS-btnGroup">
+                                <span class="fa fa-arrow-left"></span>
+                                <span class="fa fa-repeat"></span>
+                            </div>
+                            <div class="zm-website-setDNS-inputDiv">
+                                <span>http://website.zuma.com/</span>
+                                <input class="zm-website-setDNS-personalInput"
+                                       oninput="zmEditor.website.regDNS(this)" placeholder="userName">
+                            </div>
+                        </div>
+                        <div class="zm-website-setDNS-choiceBtn" onclick="zmEditor.website.slideInputBox(this,'zmSecond')">
+                            使用族蚂二级域名！
+                        </div>
+                        <div class="zm-website-setDNS-urlError">*&nbsp;请输入4-20位的数字、字母和连字符</div>
+                    </div>
+                </div>
+            </div>
+            <div class="zm-website-setDNS-nextStepLine">
+                <span>下一步</span>
+            </div>
+            <div class="zm-website-setDNS-describe clearFloat">
+                <div class="fa fa-television">
+                    <div class="fa fa-circle-o"></div>
+                    <div class="fa fa-mouse-pointer"></div>
+                    <span class="zm-website-setDNS-mousePointer-line1"></span>
+                    <span class="zm-website-setDNS-mousePointer-line2"></span>
+                </div>
+                <div class="zm-website-setDNS-descWord">
+                    <p>点击“现在发布”按钮，让你的网站立即在线！</p>
+                    <span>赶快发布吧！</span>
+                </div>
+            </div>
+        </div>
+        <div class="zm-dialog-footer">
+            <span class="zm-dialog-btnOK" onclick="zmEditor.website.publishNext(this)">现在发布</span>
+            <span class="zm-dialog-btnOK" onclick="zmEditor.website.saveClose(this)">确认并关闭</span>
+        </div>
+    </div>
+    <div class="zm-dialog zm-website-setService" style="transform: rotateX(-90deg);height: 350px;">
+        <div class="zm-dialog-header zm-movable-header">
+            <span class="zm-dialog-title">服务器设置</span>
+            <span class="zm-dialog-header-btn zm-tooltip zm-dialog-close " data-zm-title="关闭">×</span>
+        </div>
+        <div class="zm-website-setService-setType">
+            <span>服务器：</span>
+            <div class="zm-website-setService-servType" tabindex="1">
+                <p>使用族蚂免费服务器</p>
+                <span class="fa fa-sort-desc"></span>
+                <ul>
+                    <li data-type="zmFree">使用族蚂免费服务器</li>
+                    <li data-type="personal">使用自己的服务器</li>
+                </ul>
+            </div>
+        </div>
+        <div class="zm-website-setService-main">
+            <div class="zm-website-setService-zmFree">
+                <div class="zm-website-setService-freeTitle">
+                    请登录您的域名服务器管理网站，将您的域名DNS解析地址指向一下IP：
+                </div>
+                <div class="zm-website-setService-freeMain">
+                    <span>IP：</span>
+                    <ul>
+                        <li class="zm-website-setService-freeServ">ns3.zuma.net</li>
+                        <li>ns4.zuma.net</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="zm-website-setService-personal">
+                <div class="zm-website-setService-nameBox">
+                    <span>选择服务器：</span>
+                    <div class="zm-website-setService-servName" tabindex="2">
+                        <p>上海大哥大服务器</p>
+                        <span class="fa fa-sort-desc"></span>
+                        <ul>
+                            <li data-ip="163.110.120.125" data-port="3080" data-valid="true" class="zm-pServCheck">
+                                上海大哥大服务器
+                            </li>
+                            <li data-ip="192.168.2.125" data-port="8080" data-valid="true">
+                                北京二弟二服务器
+                            </li>
+                        </ul>
+                        <span class="zm-website-setService-addServ"
+                              onclick="zmEditor.website.serviceEdit(this,'add')">+添加服务器</span>
+                    </div>
+                </div>
+                <div class="zm-website-setService-serviceBox">
+                    <div class="zm-website-setService-serviceInfo">
+                        <span>上海大哥大服务器</span>
+                        <span>163.110.120.125</span>
+                        <span>3080</span>
+                        <span>有效</span>
+                    </div>
+                    <div class="zm-website-setService-serviceCtrl" data-index="0">
+                        <span onclick="zmEditor.website.serviceTest(this)">通讯测试</span>
+                        <span onclick="zmEditor.website.serviceEdit(this,'edit')">编辑服务器</span>
+                        <span onclick="zmEditor.website.serviceDel(this)">删除服务器</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zm-website-setService-showAgain">
+            <input type="checkbox" placeholder="">
+            <span>不在显示本提示框</span>
+        </div>
+        <div class="zm-dialog-footer">
+            <span class="zm-dialog-btnOK" onclick="zmEditor.website.publishNow(this)">现在发布</span>
+        </div>
+    </div>
+</div>
+
